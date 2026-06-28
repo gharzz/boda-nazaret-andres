@@ -46,14 +46,13 @@
   .sub{color:var(--ink);opacity:.7;max-width:640px;margin:14px auto 0}
 
   /* ---- HOJAS divisor + iconos de sección ---- */
-  /* corner eucalyptus images for sections */
-  .corner-euca{position:absolute;width:130px;height:auto;pointer-events:none;opacity:.88;z-index:0;
-    -webkit-mask-image:radial-gradient(ellipse 72% 72% at 18% 80%, black 22%, transparent 68%);
-    mask-image:radial-gradient(ellipse 72% 72% at 18% 80%, black 22%, transparent 68%)}
-  .corner-euca.cl{bottom:-15px;left:-10px;transform:rotate(-8deg)}
-  .corner-euca.cr{bottom:-15px;right:-10px;transform:scaleX(-1) rotate(-8deg)}
-  .story,.gallery,.details,.regalos,.rsvp,.fotos{position:relative}
-  footer{position:relative}
+  /* corner eucalyptus images for sections (esquinas superiores) */
+  .corner-euca{position:absolute;width:clamp(170px,22vw,260px);height:auto;pointer-events:none;opacity:.9;z-index:0}
+  .corner-euca.cl{top:-30px;left:-30px;transform:rotate(8deg)}
+  .corner-euca.cr{top:-30px;right:-30px;transform:scaleX(-1) rotate(8deg)}
+  .story,.rsvp{position:relative;overflow:hidden}
+  footer{position:relative;overflow:hidden}
+  @media(max-width:600px){.corner-euca{width:clamp(120px,34vw,180px)}}
   .secicon{width:74px;margin:18px auto 0;color:var(--sage-d)}
   .secicon.lg{width:104px}
   .secicon svg{width:100%;height:auto;display:block}
@@ -147,10 +146,8 @@
   .bq-tl{top:-40px;left:-50px}
   .bq-br{bottom:-40px;right:-50px;transform:scale(-1)}
   .bq-img{width:100%;height:auto;opacity:0;transform:scale(.88);
-          -webkit-mask-image:radial-gradient(ellipse 80% 80% at 28% 28%, black 38%, transparent 72%);
-          mask-image:radial-gradient(ellipse 80% 80% at 28% 28%, black 38%, transparent 72%);
           transition:opacity 1.6s ease,transform 1.8s cubic-bezier(.2,.8,.3,1)}
-  .hero.in .bq-img{opacity:.95;transform:scale(1)}
+  .hero.in .bq-img{opacity:1;transform:scale(1)}
   @media(max-width:600px){.bouquet{width:clamp(180px,58vw,280px)}}
   @media(prefers-reduced-motion:reduce){.bq-img{transition:none}}
 
@@ -569,8 +566,8 @@
 
 <!-- HERO -->
 <header class="hero" id="inicio">
-  <div class="bouquet bq-tl"><img class="bq-img" src="assets/euca-grande.jpg" alt=""></div>
-  <div class="bouquet bq-br"><img class="bq-img" src="assets/euca-grande.jpg" alt=""></div>
+  <div class="bouquet bq-tl"><img class="bq-img" src="assets/euca-portada.webp" alt=""></div>
+  <div class="bouquet bq-br"><img class="bq-img" src="assets/euca-portada.webp" alt=""></div>
   <div class="date aos">11 · 10 · 2026</div>
   <!-- EDITAR-NOMBRES -->
   <div class="script aos" style="--d:.1s">Nazaret y Andrés</div>
@@ -613,8 +610,8 @@
 
 <!-- STORY + VIDEO -->
 <section class="story center" id="historia">
-  <img class="corner-euca cl" src="assets/euca-set.jpg" alt="">
-  <img class="corner-euca cr" src="assets/euca-set.jpg" alt="">
+  <img class="corner-euca cl" src="assets/euca-seccion.webp" alt="">
+  <img class="corner-euca cr" src="assets/euca-seccion.webp" alt="">
   <div class="wrap">
     <div class="eyebrow aos">Nuestra historia</div>
     <h2 class="title aos" style="--d:.15s">El momento en que dijo sí</h2>
@@ -731,8 +728,8 @@
 
 <!-- RSVP -->
 <section class="rsvp center" id="rsvp">
-  <img class="corner-euca cl" src="assets/euca-set.jpg" alt="">
-  <img class="corner-euca cr" src="assets/euca-set.jpg" alt="">
+  <img class="corner-euca cl" src="assets/euca-seccion.webp" alt="">
+  <img class="corner-euca cr" src="assets/euca-seccion.webp" alt="">
   <div class="wrap">
     <div class="eyebrow aos">Dudas rápidas</div>
     <h2 class="title aos" style="--d:.15s">Preguntas frecuentes</h2>
@@ -806,8 +803,8 @@
 </section>
 
 <footer>
-  <img class="corner-euca cl" src="assets/euca-set.jpg" alt="">
-  <img class="corner-euca cr" src="assets/euca-set.jpg" alt="">
+  <img class="corner-euca cl" src="assets/euca-seccion.webp" alt="">
+  <img class="corner-euca cr" src="assets/euca-seccion.webp" alt="">
   <!-- EDITAR-NOMBRES -->
   <div class="script">Nazaret y Andrés</div>
   <div class="dt">11 · 10 · 2026 · Cortijo de Enmedio, Granada</div>
