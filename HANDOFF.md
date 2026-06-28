@@ -1,5 +1,5 @@
 # Handoff — Web Boda Nazaret y Andrés
-**Última actualización:** 2026-06-28 (sesión 5)
+**Última actualización:** 2026-06-28 (sesión 6)
 
 ## Estado actual
 Web publicada en **GitHub Pages** y funcionando. Migración de Netlify completada.
@@ -82,6 +82,21 @@ SVG sintéticos sustituidos por imágenes acuarela en `assets/`:
 
 ## Cambios de texto (sesión 5)
 "maravillosa presencia" (era hermosa); quitado h2 "Cómo será la jornada"; "¡Sé tú mismo!" (acentos); ceremonia **17:30** (era 18:00, quitada entrada "17:30 llegada"); **& → "y"** en todos los "Nazaret y Andrés"; quitado "Bienvenidos a la invitación de" del splash; hint de galería adaptado táctil/ratón; fecha del hero en fuente Great Vibes.
+
+## Sesión 6 — Fix vista previa WhatsApp (2026-06-28)
+Las meta etiquetas Open Graph (`og:url`, `og:image`) y Twitter Card apuntaban a `https://boda-nazaret-andres.netlify.app` (URL ya inexistente), por lo que WhatsApp no podía cargar la imagen de vista previa al compartir el enlace.
+
+**Cambio aplicado en `index.html` (líneas 10-18):**
+- `og:url` → `https://gharzz.github.io/boda-nazaret-andres/`
+- `og:image` → `https://gharzz.github.io/boda-nazaret-andres/assets/portada.webp`
+- `twitter:image` → ídem
+- Añadidos `og:image:width` (1200) y `og:image:height` (630) para mayor compatibilidad
+
+No quedan referencias a Netlify en ningún archivo funcional. La única mención que queda es esta misma nota histórica en HANDOFF.md.
+
+> Si la vista previa sigue sin actualizarse en WhatsApp, usar el [Facebook Sharing Debugger](https://developers.facebook.com/tools/debug/) con la URL del sitio para forzar la recarga de caché (WhatsApp usa la misma caché que Facebook/Meta).
+
+---
 
 ## PENDIENTE
 - [ ] **Limpiar pruebas:** borrar de la Google Sheet las filas `TEST_BORRAR` (envíos de prueba por curl).
