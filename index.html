@@ -127,7 +127,7 @@
   /* ---- HERO ---- */
   .hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;
         background:linear-gradient(rgba(247,246,240,.28),rgba(233,240,234,.38)),url('assets/portada.webp') center/cover no-repeat;
-        padding:120px 24px 90px}
+        padding:120px 24px 90px;overflow:hidden;position:relative}
   .scroll-hint{position:absolute;bottom:32px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:6px;color:var(--ink);opacity:.55;z-index:2}
   .scroll-hint span{font-size:.58rem;letter-spacing:.22em;text-transform:uppercase}
   .scroll-hint svg{animation:bounce 1.8s ease-in-out infinite}
@@ -143,14 +143,15 @@
   .quotebox p{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.05rem,2.6vw,1.4rem);color:var(--ink);font-weight:600;text-shadow:0 1px 16px rgba(255,255,255,.9)}
   .hero .date,.hero .script,.hero h1,.hero .quotebox,.hero>.sprig{position:relative;z-index:2}
   /* ramos de eucalipto en las esquinas del hero */
-  .bouquet{position:absolute;width:clamp(200px,30vw,360px);z-index:1;pointer-events:none}
-  .bq-tl{top:30px;left:-10px}
-  .bq-br{bottom:-20px;right:-10px;transform:scale(-1)}
-  .bq-img{width:100%;height:auto;opacity:0;transform:scale(.85);
-          -webkit-mask-image:radial-gradient(ellipse 68% 68% at 20% 20%, black 20%, transparent 65%);
-          mask-image:radial-gradient(ellipse 68% 68% at 20% 20%, black 20%, transparent 65%);
-          transition:opacity 1.4s ease,transform 1.6s cubic-bezier(.2,.8,.3,1)}
-  .hero.in .bq-img{opacity:1;transform:scale(1)}
+  .bouquet{position:absolute;width:clamp(280px,42vw,520px);z-index:1;pointer-events:none}
+  .bq-tl{top:-40px;left:-50px}
+  .bq-br{bottom:-40px;right:-50px;transform:scale(-1)}
+  .bq-img{width:100%;height:auto;opacity:0;transform:scale(.88);
+          -webkit-mask-image:radial-gradient(ellipse 80% 80% at 28% 28%, black 38%, transparent 72%);
+          mask-image:radial-gradient(ellipse 80% 80% at 28% 28%, black 38%, transparent 72%);
+          transition:opacity 1.6s ease,transform 1.8s cubic-bezier(.2,.8,.3,1)}
+  .hero.in .bq-img{opacity:.95;transform:scale(1)}
+  @media(max-width:600px){.bouquet{width:clamp(180px,58vw,280px)}}
   @media(prefers-reduced-motion:reduce){.bq-img{transition:none}}
 
   /* ---- COUNTDOWN medallón ---- */
