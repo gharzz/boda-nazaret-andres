@@ -187,6 +187,8 @@
   .count.in .sb-l2,.regalos.in .sb-l2{opacity:.9;transform:translate(-40%,-50%) rotate(12deg);transition-delay:.28s}
   .count.in .sb-r2,.regalos.in .sb-r2{opacity:.9;transform:translate(40%,-50%) scaleX(-1) rotate(12deg);transition-delay:.28s}
   @media(max-width:560px){.sb-l2,.sb-r2{display:none}}
+  /* en móvil, regalos sin las laterales superiores (se metían en el texto) */
+  @media(max-width:600px){.regalos .sb-l1,.regalos .sb-r1{display:none}}
 
   /* ---- STORY ---- */
   .story{background:var(--white)}
