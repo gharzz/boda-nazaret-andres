@@ -46,7 +46,7 @@
   .sub{color:var(--ink);opacity:.7;max-width:640px;margin:14px auto 0}
 
   /* ---- HOJAS divisor + iconos de sección ---- */
-  .sprig{display:block;margin:20px auto;color:var(--sage-d)}
+  .sprig{display:block;margin:16px auto;width:100px;height:auto;mix-blend-mode:multiply;transform:rotate(-78deg)}
   .secicon{width:74px;margin:18px auto 0;color:var(--sage-d)}
   .secicon.lg{width:104px}
   .secicon svg{width:100%;height:auto;display:block}
@@ -296,7 +296,7 @@
   .faq-item p{padding:0 4px 18px;font-size:.86rem;color:var(--muted);line-height:1.7;margin:0}
 
   footer{background:var(--sage-d);color:#f3f7f2;text-align:center;padding:60px 24px}
-  footer .sprig{color:#eef3ec;opacity:.9}
+  footer .sprig{opacity:.7;mix-blend-mode:screen}
   footer .script{font-size:3.2rem;color:#fff}
   footer .dt{font-size:.7rem;letter-spacing:.28em;text-transform:uppercase;color:#e7eee6;margin-top:6px}
 
@@ -614,7 +614,7 @@
 <section class="story center" id="historia">
   <div class="wrap">
     <div class="eyebrow aos">Nuestra historia</div>
-    <svg class="sprig aos" style="--d:.1s" width="120" height="44"><use href="#sprig"/></svg>
+    <img class="sprig aos" style="--d:.1s" src="assets/eucalipto.jpg" alt="">
     <h2 class="title aos" style="--d:.15s">El momento en que dijo sí</h2>
     <div class="videowrap aos" style="--d:.1s">
       <video controls preload="metadata" playsinline poster="assets/pedida-poster.jpg">
@@ -731,7 +731,7 @@
 <section class="rsvp center" id="rsvp">
   <div class="wrap">
     <div class="eyebrow aos">Dudas rápidas</div>
-    <svg class="sprig aos" style="--d:.1s" width="120" height="44"><use href="#sprig"/></svg>
+    <img class="sprig aos" style="--d:.1s" src="assets/eucalipto.jpg" alt="">
     <h2 class="title aos" style="--d:.15s">Preguntas frecuentes</h2>
     <div class="faq-list aos" style="--d:.2s">
       <details class="faq-item">
@@ -753,7 +753,7 @@
     </div>
 
     <div class="eyebrow aos" style="margin-top:64px">Confirma tu asistencia</div>
-    <svg class="sprig aos" style="--d:.1s" width="120" height="44"><use href="#sprig"/></svg>
+    <img class="sprig aos" style="--d:.1s" src="assets/eucalipto.jpg" alt="">
     <h2 class="title aos" style="--d:.15s" id="rsvpTitle">¿Nos acompañas?</h2>
     <p class="sub aos" style="--d:.2s" id="rsvpSub">Te agradecemos que confirmes antes del 1 de septiembre de 2026.</p>
     <form class="aos" style="--d:.25s" id="rsvpForm" action="https://docs.google.com/forms/d/e/1FAIpQLSfT0QMw_4OS6nj9S5_IeE2GHfi_Mpxjy7y0PB8uXNteeeRRyA/formResponse" method="POST" onsubmit="submitRSVP(event)">
@@ -804,7 +804,7 @@
 </section>
 
 <footer>
-  <svg class="sprig" width="120" height="44"><use href="#sprig"/></svg>
+  <img class="sprig" src="assets/eucalipto.jpg" alt="">
   <!-- EDITAR-NOMBRES -->
   <div class="script">Nazaret y Andrés</div>
   <div class="dt">11 · 10 · 2026 · Cortijo de Enmedio, Granada</div>
