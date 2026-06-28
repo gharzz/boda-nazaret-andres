@@ -147,15 +147,6 @@
   .quotebox .qm.close{right:-2px;bottom:-22px}
   .quotebox p{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.05rem,2.6vw,1.4rem);color:var(--ink);font-weight:600;text-shadow:0 1px 16px rgba(255,255,255,.9)}
   .hero .date,.hero .script,.hero h1,.hero .quotebox,.hero>.sprig{position:relative;z-index:2}
-  /* ramos de eucalipto en las esquinas del hero */
-  .bouquet{position:absolute;width:clamp(280px,42vw,520px);z-index:1;pointer-events:none}
-  .bq-tl{top:15px;left:-50px;width:clamp(245px,36vw,440px);transform:rotate(20deg)}
-  .bq-br{bottom:-60px;right:-70px;width:clamp(205px,31vw,380px);transform:rotate(-10deg)}
-  .bq-img{width:100%;height:auto;opacity:0;transform:scale(.88);filter:saturate(.88) brightness(.97);
-          transition:opacity 1.6s ease,transform 1.8s cubic-bezier(.2,.8,.3,1)}
-  .hero.in .bq-img{opacity:.68;transform:scale(1)}
-  @media(max-width:600px){.bouquet{width:clamp(180px,58vw,280px)}}
-  @media(prefers-reduced-motion:reduce){.bq-img{transition:none}}
 
   /* ---- COUNTDOWN medallón ---- */
   .count{background:var(--tint)}
@@ -332,10 +323,6 @@
     section{padding:62px 20px}
     h2.title{font-size:clamp(2rem,8vw,2.6rem)}
     .hero{padding:108px 22px 80px}
-    /* ramos: más pequeños, en las esquinas, sin tapar el texto */
-    .bouquet{width:clamp(120px,42vw,168px);opacity:.85}
-    .bq-tl{top:42px;left:-34px}
-    .bq-br{bottom:-4px;right:-34px}
     /* ramas laterales: solo asoman */
     .sidebranch{width:min(38vw,170px)}
     .count.in .sb-l1,.regalos.in .sb-l1{transform:translate(-42%,-50%) rotate(-6deg)}
@@ -571,8 +558,6 @@
 
 <!-- HERO -->
 <header class="hero" id="inicio">
-  <div class="bouquet bq-tl"><img class="bq-img" src="assets/euca-portada.webp" alt=""></div>
-  <div class="bouquet bq-br"><img class="bq-img" src="assets/euca-portada.webp" alt=""></div>
   <div class="date aos">11 · 10 · 2026</div>
   <!-- EDITAR-NOMBRES -->
   <div class="script aos" style="--d:.1s">Nazaret y Andrés</div>
