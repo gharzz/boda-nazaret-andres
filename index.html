@@ -407,28 +407,26 @@
 <!-- ============ DEFINICIONES SVG ============ -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <!-- ramita divisoria -->
-  <symbol id="sprig" viewBox="0 0 120 34">
-    <!-- tallo principal ligeramente ondulado -->
-    <path d="M6 17C30 16 55 18 114 16" fill="none" stroke="#7e9670" stroke-width="1.1" stroke-linecap="round"/>
-    <!-- tallos secundarios hacia las hojas -->
-    <path d="M27 17C27 14 26 11 24 9" fill="none" stroke="#7e9670" stroke-width=".8" stroke-linecap="round"/>
-    <path d="M27 17C25 19 23 22 22 25" fill="none" stroke="#7e9670" stroke-width=".8" stroke-linecap="round"/>
-    <path d="M48 17C48 14 47 10 46 8" fill="none" stroke="#7e9670" stroke-width=".8" stroke-linecap="round"/>
-    <path d="M48 17C46 20 44 23 43 26" fill="none" stroke="#7e9670" stroke-width=".8" stroke-linecap="round"/>
-    <path d="M69 17C69 14 68 10 67 8" fill="none" stroke="#7e9670" stroke-width=".8" stroke-linecap="round"/>
-    <path d="M69 17C67 20 66 23 65 26" fill="none" stroke="#7e9670" stroke-width=".8" stroke-linecap="round"/>
-    <path d="M89 17C89 14 88 11 87 9" fill="none" stroke="#7e9670" stroke-width=".8" stroke-linecap="round"/>
-    <path d="M89 17C88 20 87 22 86 25" fill="none" stroke="#7e9670" stroke-width=".8" stroke-linecap="round"/>
-    <!-- hojas superiores -->
-    <ellipse cx="23" cy="8"  rx="9.5" ry="4"   transform="rotate(-42 23 8)"  fill="#a9c596" opacity=".88"/>
-    <ellipse cx="45" cy="7"  rx="10"  ry="4.2"  transform="rotate(-36 45 7)"  fill="#7e9670" opacity=".85"/>
-    <ellipse cx="66" cy="7"  rx="9.5" ry="4"   transform="rotate(-30 66 7)"  fill="#8aa67c" opacity=".88"/>
-    <ellipse cx="86" cy="8"  rx="9"   ry="3.8"  transform="rotate(-25 86 8)"  fill="#bcd3a8" opacity=".82"/>
-    <!-- hojas inferiores -->
-    <ellipse cx="21" cy="26" rx="9"   ry="3.8"  transform="rotate( 38 21 26)" fill="#8aa67c" opacity=".82"/>
-    <ellipse cx="42" cy="27" rx="9.5" ry="4"   transform="rotate( 33 42 27)" fill="#a9c596" opacity=".8"/>
-    <ellipse cx="64" cy="27" rx="9"   ry="3.8"  transform="rotate( 27 64 27)" fill="#6f8a60" opacity=".78"/>
-    <ellipse cx="85" cy="26" rx="8.5" ry="3.6"  transform="rotate( 22 85 26)" fill="#a9c596" opacity=".75"/>
+  <symbol id="sprig" viewBox="0 0 120 44">
+    <!-- tallo con curva orgánica -->
+    <path d="M5 24C28 22 65 25 115 22" fill="none" stroke="#7e9670" stroke-width="1.2" stroke-linecap="round"/>
+    <!-- hojas alternadas: forma real con bezier, decrecen hacia el extremo -->
+    <!-- hoja 1: superior x≈18 -->
+    <path d="M0,0 C2,-4 4,-13 0,-19 C-4,-13 -2,-4 0,0Z" fill="#8aa67c"  opacity=".88" transform="translate(18,24) rotate(-52)"/>
+    <!-- hoja 2: inferior x≈32 -->
+    <path d="M0,0 C2,-4 4,-13 0,-18 C-4,-13 -2,-4 0,0Z" fill="#a9c596"  opacity=".82" transform="translate(32,24) rotate(52)"/>
+    <!-- hoja 3: superior x≈46 -->
+    <path d="M0,0 C2,-4 4,-13 0,-18 C-4,-13 -2,-4 0,0Z" fill="#7e9670"  opacity=".87" transform="translate(46,23) rotate(-46)"/>
+    <!-- hoja 4: inferior x≈60 -->
+    <path d="M0,0 C2,-4 4,-12 0,-17 C-4,-12 -2,-4 0,0Z" fill="#8aa67c"  opacity=".82" transform="translate(60,24) rotate(46)"/>
+    <!-- hoja 5: superior x≈74 -->
+    <path d="M0,0 C1,-4 3,-11 0,-17 C-3,-11 -1,-4 0,0Z" fill="#a9c596"  opacity=".85" transform="translate(74,23) rotate(-40)"/>
+    <!-- hoja 6: inferior x≈86 -->
+    <path d="M0,0 C1,-4 3,-11 0,-16 C-3,-11 -1,-4 0,0Z" fill="#bcd3a8"  opacity=".78" transform="translate(86,23) rotate(40)"/>
+    <!-- hoja 7: superior x≈98 -->
+    <path d="M0,0 C1,-3 3,-9  0,-14 C-3,-9  -1,-3 0,0Z" fill="#6f8a60"  opacity=".82" transform="translate(98,22) rotate(-34)"/>
+    <!-- hoja 8: inferior x≈108 -->
+    <path d="M0,0 C1,-3 3,-9  0,-13 C-3,-9  -1,-3 0,0Z" fill="#8aa67c"  opacity=".75" transform="translate(108,23) rotate(34)"/>
   </symbol>
 
   <!-- rama de eucalipto acuarela (multicolor) -->
@@ -616,7 +614,7 @@
 <section class="story center" id="historia">
   <div class="wrap">
     <div class="eyebrow aos">Nuestra historia</div>
-    <svg class="sprig aos" style="--d:.1s" width="120" height="34"><use href="#sprig"/></svg>
+    <svg class="sprig aos" style="--d:.1s" width="120" height="44"><use href="#sprig"/></svg>
     <h2 class="title aos" style="--d:.15s">El momento en que dijo sí</h2>
     <div class="videowrap aos" style="--d:.1s">
       <video controls preload="metadata" playsinline poster="assets/pedida-poster.jpg">
@@ -733,7 +731,7 @@
 <section class="rsvp center" id="rsvp">
   <div class="wrap">
     <div class="eyebrow aos">Dudas rápidas</div>
-    <svg class="sprig aos" style="--d:.1s" width="120" height="34"><use href="#sprig"/></svg>
+    <svg class="sprig aos" style="--d:.1s" width="120" height="44"><use href="#sprig"/></svg>
     <h2 class="title aos" style="--d:.15s">Preguntas frecuentes</h2>
     <div class="faq-list aos" style="--d:.2s">
       <details class="faq-item">
@@ -755,7 +753,7 @@
     </div>
 
     <div class="eyebrow aos" style="margin-top:64px">Confirma tu asistencia</div>
-    <svg class="sprig aos" style="--d:.1s" width="120" height="34"><use href="#sprig"/></svg>
+    <svg class="sprig aos" style="--d:.1s" width="120" height="44"><use href="#sprig"/></svg>
     <h2 class="title aos" style="--d:.15s" id="rsvpTitle">¿Nos acompañas?</h2>
     <p class="sub aos" style="--d:.2s" id="rsvpSub">Te agradecemos que confirmes antes del 1 de septiembre de 2026.</p>
     <form class="aos" style="--d:.25s" id="rsvpForm" action="https://docs.google.com/forms/d/e/1FAIpQLSfT0QMw_4OS6nj9S5_IeE2GHfi_Mpxjy7y0PB8uXNteeeRRyA/formResponse" method="POST" onsubmit="submitRSVP(event)">
@@ -806,7 +804,7 @@
 </section>
 
 <footer>
-  <svg class="sprig" width="120" height="34"><use href="#sprig"/></svg>
+  <svg class="sprig" width="120" height="44"><use href="#sprig"/></svg>
   <!-- EDITAR-NOMBRES -->
   <div class="script">Nazaret y Andrés</div>
   <div class="dt">11 · 10 · 2026 · Cortijo de Enmedio, Granada</div>
