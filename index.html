@@ -50,10 +50,9 @@
   .corner-euca{position:absolute;width:clamp(170px,22vw,260px);height:auto;pointer-events:none;opacity:.9;z-index:0}
   .corner-euca.cl{top:-30px;left:-30px;transform:rotate(8deg)}
   .corner-euca.cr{top:-30px;right:-30px;transform:scaleX(-1) rotate(8deg)}
-  .story .corner-euca{width:clamp(115px,15vw,175px)}
-  .story,.rsvp{position:relative;overflow:hidden}
+  .gallery,.rsvp{position:relative;overflow:hidden}
   footer{position:relative;overflow:hidden}
-  @media(max-width:600px){.corner-euca{width:clamp(120px,34vw,180px)}.story .corner-euca{width:clamp(85px,24vw,125px)}}
+  @media(max-width:600px){.corner-euca{width:clamp(120px,34vw,180px)}}
   .secicon{width:74px;margin:18px auto 0;color:var(--sage-d)}
   .secicon.lg{width:104px}
   .secicon svg{width:100%;height:auto;display:block}
@@ -611,8 +610,6 @@
 
 <!-- STORY + VIDEO -->
 <section class="story center" id="historia">
-  <img class="corner-euca cl" src="assets/euca-seccion.webp" alt="">
-  <img class="corner-euca cr" src="assets/euca-seccion.webp" alt="">
   <div class="wrap">
     <div class="eyebrow aos">Nuestra historia</div>
     <h2 class="title aos" style="--d:.15s">El momento en que dijo sí</h2>
@@ -626,6 +623,8 @@
 
 <!-- GALERÍA -->
 <section class="gallery center" id="galeria">
+  <img class="corner-euca cl" src="assets/euca-seccion.webp" alt="">
+  <img class="corner-euca cr" src="assets/euca-seccion.webp" alt="">
   <div class="wrap">
     <div class="eyebrow aos">Retratos de nuestro amor</div>
     <h2 class="title aos" style="--d:.1s">Galería</h2>
