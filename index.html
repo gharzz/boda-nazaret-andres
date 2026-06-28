@@ -949,8 +949,7 @@
     function prev(){open((cur-1+imgs.length)%imgs.length);}
     function next(){open((cur+1)%imgs.length);}
     document.addEventListener('DOMContentLoaded',function(){
-      imgs=Array.from(document.querySelectorAll('.gallery-slide img, .gallery img, .gslide img, [class*="galeria"] img'));
-      if(!imgs.length) imgs=Array.from(document.querySelectorAll('img[src*="galeria"]'));
+      imgs=Array.from(document.querySelectorAll('.gslide img'));
       imgs.forEach(function(img,i){img.style.cursor='zoom-in';img.addEventListener('click',function(){open(i);});});
       document.getElementById('lb-close').addEventListener('click',close);
       document.getElementById('lb-prev').addEventListener('click',function(e){e.stopPropagation();prev();});
