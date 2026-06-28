@@ -191,6 +191,8 @@
 
   /* ---- GALERÍA ---- */
   .gallery{background:var(--cream)}
+  .hint-touch{display:none}
+  @media(hover:none)and(pointer:coarse){.hint-mouse{display:none}.hint-touch{display:inline}}
   .gallery .sub{font-family:'Great Vibes',cursive;font-size:1.9rem;color:var(--green);margin-top:4px}
   .carousel{position:relative;max-width:1040px;margin:34px auto 0}
   .gtrack{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:8px 4px 18px;scroll-behavior:smooth}
@@ -625,7 +627,7 @@
       <circle class="fillin" cx="36" cy="23" r="1.6"/>
     </svg></div>
     <p class="sub aos" style="--d:.18s">un instante que queda en la eternidad</p>
-    <p class="aos" style="--d:.22s;font-size:.8rem;color:var(--ink);opacity:.6;margin-top:8px;letter-spacing:.04em">Pulsa sobre las fotos para ampliarlas</p>
+    <p class="aos" style="--d:.22s;font-size:.8rem;color:var(--ink);opacity:.6;margin-top:8px;letter-spacing:.04em"><span class="hint-mouse">Pulsa sobre las fotos para ampliarlas</span><span class="hint-touch">Toca las fotos para ampliarlas</span></p>
   </div>
   <!-- EDITAR-FOTOS: sustituye los src por tus fotos (assets/galeria/1.jpg, ...) -->
   <div class="carousel aos" style="--d:.2s">
