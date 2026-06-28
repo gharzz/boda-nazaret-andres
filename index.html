@@ -54,7 +54,11 @@
   .corner-euca.cl.in{opacity:.9;transform:translateY(0) rotate(8deg) scale(1)}
   .corner-euca.cr.in{opacity:.9;transform:translateY(0) scaleX(-1) rotate(8deg) scale(1)}
   .gallery,.rsvp,.regalos{position:relative;overflow:hidden}
-  @media(max-width:600px){.corner-euca{width:clamp(120px,34vw,180px)}}
+  /* FAQ (rsvp): más pequeñas y más abajo para que no las corte la sección de encima */
+  .rsvp .corner-euca{width:clamp(115px,15vw,180px)}
+  .rsvp .corner-euca.cl{top:24px}
+  .rsvp .corner-euca.cr{top:24px}
+  @media(max-width:600px){.corner-euca{width:clamp(120px,34vw,180px)}.rsvp .corner-euca{width:clamp(85px,24vw,130px)}}
   .secicon{width:74px;margin:18px auto 0;color:var(--sage-d)}
   .secicon.lg{width:104px}
   .secicon svg{width:100%;height:auto;display:block}
@@ -146,10 +150,10 @@
   /* ramos de eucalipto en las esquinas del hero */
   .bouquet{position:absolute;width:clamp(280px,42vw,520px);z-index:1;pointer-events:none}
   .bq-tl{top:15px;left:-50px;width:clamp(245px,36vw,440px);transform:rotate(20deg)}
-  .bq-br{bottom:-40px;right:-50px;width:clamp(260px,39vw,480px);transform:rotate(-10deg)}
-  .bq-img{width:100%;height:auto;opacity:0;transform:scale(.88);
+  .bq-br{bottom:-60px;right:-70px;width:clamp(205px,31vw,380px);transform:rotate(-10deg)}
+  .bq-img{width:100%;height:auto;opacity:0;transform:scale(.88);filter:saturate(.88) brightness(.97);
           transition:opacity 1.6s ease,transform 1.8s cubic-bezier(.2,.8,.3,1)}
-  .hero.in .bq-img{opacity:1;transform:scale(1)}
+  .hero.in .bq-img{opacity:.68;transform:scale(1)}
   @media(max-width:600px){.bouquet{width:clamp(180px,58vw,280px)}}
   @media(prefers-reduced-motion:reduce){.bq-img{transition:none}}
 
@@ -184,10 +188,10 @@
   .sb-r1{top:40%;right:0;transform:translate(72%,-50%) scaleX(-1) rotate(-6deg)}
   .sb-l2{top:66%;left:0;width:min(30vw,210px);transform:translate(-85%,-50%) rotate(12deg)}
   .sb-r2{top:66%;right:0;width:min(30vw,210px);transform:translate(85%,-50%) scaleX(-1) rotate(12deg)}
-  .count.in .sb-l1{opacity:.95;transform:translate(-26%,-50%) rotate(-6deg)}
-  .count.in .sb-r1{opacity:.95;transform:translate(26%,-50%) scaleX(-1) rotate(-6deg)}
-  .count.in .sb-l2{opacity:.9;transform:translate(-40%,-50%) rotate(12deg);transition-delay:.28s}
-  .count.in .sb-r2{opacity:.9;transform:translate(40%,-50%) scaleX(-1) rotate(12deg);transition-delay:.28s}
+  .count.in .sb-l1,.regalos.in .sb-l1{opacity:.95;transform:translate(-26%,-50%) rotate(-6deg)}
+  .count.in .sb-r1,.regalos.in .sb-r1{opacity:.95;transform:translate(26%,-50%) scaleX(-1) rotate(-6deg)}
+  .count.in .sb-l2,.regalos.in .sb-l2{opacity:.9;transform:translate(-40%,-50%) rotate(12deg);transition-delay:.28s}
+  .count.in .sb-r2,.regalos.in .sb-r2{opacity:.9;transform:translate(40%,-50%) scaleX(-1) rotate(12deg);transition-delay:.28s}
   @media(max-width:560px){.sb-l2,.sb-r2{display:none}}
 
   /* ---- STORY ---- */
@@ -334,8 +338,8 @@
     .bq-br{bottom:-4px;right:-34px}
     /* ramas laterales: solo asoman */
     .sidebranch{width:min(38vw,170px)}
-    .count.in .sb-l1{transform:translate(-42%,-50%) rotate(-6deg)}
-    .count.in .sb-r1{transform:translate(42%,-50%) scaleX(-1) rotate(-6deg)}
+    .count.in .sb-l1,.regalos.in .sb-l1{transform:translate(-42%,-50%) rotate(-6deg)}
+    .count.in .sb-r1,.regalos.in .sb-r1{transform:translate(42%,-50%) scaleX(-1) rotate(-6deg)}
     /* medallón: texto compacto para que no se desborde */
     .medallion{width:min(88vw,360px);margin-top:30px}
     .faltan{font-size:clamp(1.6rem,7vw,2rem)}
@@ -691,6 +695,10 @@
 <section class="regalos center" id="regalos">
   <img class="corner-euca cl" src="assets/euca-seccion.webp" alt="">
   <img class="corner-euca cr" src="assets/euca-seccion.webp" alt="">
+  <img class="sidebranch sb-l1" src="assets/eucalipto.jpg" alt="">
+  <img class="sidebranch sb-r1" src="assets/eucalipto.jpg" alt="">
+  <img class="sidebranch sb-l2" src="assets/eucalipto.jpg" alt="">
+  <img class="sidebranch sb-r2" src="assets/eucalipto.jpg" alt="">
   <div class="wrap">
     <div class="eyebrow aos">Un detalle</div>
     <div class="secicon lg aos" style="--d:.1s"><svg class="draw" viewBox="0 0 48 48">
@@ -859,7 +867,7 @@
   const io=new IntersectionObserver(es=>es.forEach(e=>e.target.classList.toggle('in',e.isIntersecting)),{threshold:.14});
   document.querySelectorAll('.aos,.corner-euca').forEach(el=>io.observe(el));
   const grow=new IntersectionObserver(es=>es.forEach(e=>e.target.classList.toggle('in',e.isIntersecting)),{threshold:.18});
-  document.querySelectorAll('.hero,.count').forEach(el=>grow.observe(el));
+  document.querySelectorAll('.hero,.count,.regalos').forEach(el=>grow.observe(el));
 
   /* ---- Galería carrusel ---- */
   const track=document.getElementById('gtrack');
